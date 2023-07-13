@@ -1,0 +1,117 @@
+.quiz-container {
+    @apply fixed top-0 left-0 z-[3] w-screen h-screen flex items-start md:items-center justify-center bg-[#F1EEE6] overflow-auto py-10 opacity-100 pointer-events-auto;
+    transition: all 0.6s ease;
+}
+
+.quiz-container[data-open="false"] {
+    @apply opacity-0 pointer-events-none;
+}
+
+.progress-bar {
+    @apply absolute top-0 left-0 rounded-r-lg bg-[#FC6F68] h-[0.5rem];
+    transition: all 1s cubic-bezier(.27,.6,.3,.92);
+    display: block !important;
+}
+
+.question {
+    @apply w-full p-2;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.answers {
+    @apply w-full;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pill {
+    border-radius: 40px;
+    padding: 1.35rem 2rem;
+    border: 1px solid #0f4c81;
+    color: #0f4c81;
+    transition: all 0.3s ease;
+    background-color: transparent;
+    cursor: pointer;
+    font-family: var(--font-body-family);
+    letter-spacing: 0.6px;
+    font-size: 1.6rem;
+    font-weight: 200;
+}
+
+.pill:hover,.pill[data-selected="true"] {
+    background-color: #0f4c81;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.primary-btn {
+    background-color: #0f4c81;
+    color: white;
+    border-radius: 40px;
+    padding: 1rem 2rem;
+    justify-self: flex-start;
+    align-self: flex-start;
+    transition: 0.3s ease;
+    border: none;
+    outline: none;
+    font-family: var(--font-body-family);
+    letter-spacing: 0.6px;
+}
+
+.primary-btn:hover {
+    background-color: #3b6d98;
+}
+
+.primary-btn:disabled {
+    @apply bg-gray-400 cursor-not-allowed;
+}
+
+.back-btn {
+    color: #0f4c81;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: bold;
+    align-self: flex-start;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: none;
+    outline: none;
+    background: transparent;
+    cursor: pointer;
+    font-family: var(--font-body-family);
+}
+
+.select,.input {
+    @apply px-5 py-5 rounded-lg bg-white max-w-[600px] w-full sm:w-auto;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    outline: none;
+    border: none;
+    font-family: var(--font-body-family);
+}
+
+.select {
+    @apply cursor-pointer;
+}
+
+.question {
+    transition: opacity 0.4s ease;
+    animation: fadein 0.4s ease;
+}
+
+.question-container[data-transitioning="true"] > .question {
+    @apply opacity-0 pointer-events-none;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

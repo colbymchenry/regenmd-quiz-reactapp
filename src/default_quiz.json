@@ -1,0 +1,113 @@
+[
+    {
+        "title": "What are your key concerns?",
+        "info": "Please select all that apply.",
+        "multiselect": true,
+        "type": "pill",
+        "required": true,
+        "options": [
+            "Weight loss",
+            "Build muscle",
+            "Better sleep",
+            "Fat loss",
+            "Anti-aging",
+            "Joint pain relief",
+            "Better sex",
+            "Less fatigue & more energy",
+            "Focus & brain health",
+            "Athletic performance"
+        ]
+    },
+    {
+        "title": "What are your specific goals?",
+        "info": "Please select all that apply.",
+        "multiselect": true,
+        "type": "pill",
+        "required": true,
+        "options": [
+            "Lose 5-15lbs",
+            "Lost 20lbs or more",
+            "Relief from joint pain",
+            "Be more alert",
+            "Better erections",
+            "Slow down aging process",
+            "More muscle definition",
+            "Have energy to get through the day",
+            "Increase sex drive",
+            "Not get sick easily",
+            "Better skin tone",
+            "Have energy to workout",
+            "Clear brain fog",
+            "Be able to sleep 8 hours a night",
+            "Recover from a workout better"
+        ]
+    },
+    {
+        "title": "What is your age?",
+        "info": "Please select one.",
+        "multiselect": false,
+        "type": "pill",
+        "required": true,
+        "options": [
+            "18 - 25",
+            "25 - 30",
+            "32 - 40",
+            "40 - 55",
+            "55+"
+        ]
+    },
+    {
+        "title": "Where are you located?",
+        "info": "I live in...",
+        "multiselect": false,
+        "type": "dropdown-state",
+        "required": true
+    },
+    {
+        "title": "What is your email address?",
+        "info": "We'll send your results to this address.",
+        "type": "input",
+        "inputs": [
+            {
+                "placeholder": "Enter email",
+                "type": "email",
+                "required": true
+            }
+        ]
+    },
+    {
+        "title": "What is your name?",
+        "info": "We'll use this to create a profile for you.",
+        "type": "input",
+        "inputs": [
+            {
+                "placeholder": "First name",
+                "required": true
+            },
+            {
+                "placeholder": "Last name",
+                "required": true
+            }
+        ]
+    },
+    {
+        "title": "Do you have any known allergies?",
+        "info": "Enter all allergies to your knowledge.",
+        "type": "input",
+        "inputs": [
+            {
+                "placeholder": "Peanuts, glucose, etc..."
+            }
+        ]
+    },
+    {
+        "title": "Do you have a history of cancer or are you currently being treated for cancer?",
+        "multiselect": false,
+        "type": "pill",
+        "required": true,
+        "options": [
+            "Yes",
+            "No"
+        ]
+    }
+]
